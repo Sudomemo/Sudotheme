@@ -1,0 +1,332 @@
+@charset "UTF-8";
+
+// This function will round a color to the same 5-bit colorspace that .ntft and .nbf images use.
+@function round-color($color) {
+  $red: round((red($color) / 32)) * 32;
+  $green: round((green($color) / 32)) * 32;
+  $blue: round((blue($color) / 32)) * 32;
+  @return rgb($red, $green, $blue);
+}
+
+//just in case anything ever changes, I've separated these varaibles
+$star-colors: ( #fdc556, #138200, #ff455c, #00b0f9, #a411b9 );
+$span-colors: ( 'new': #cc0000, 'price': #92cb22, 'timestamp': #999999, 'orange': #ff8d45, 'green': #82c300, 'gray': #666666, 'white': #ffffff );
+
+$default-gray: #cccccc;
+
+@mixin common {
+	html { margin: 0; padding: 0; }
+	div.title {
+		margin: 0 7px 0 7px;
+		padding: 7px 5px 7px 5px;
+		border-style: solid;
+		border-width: 0 0 1px 0;
+		border-color: $default-gray;
+	}
+	div.description {
+		margin: 0 7px 0 7px;
+		padding: 7px 5px 7px 5px;
+		border-style: solid;
+		border-width: 0 0 1px 0;
+		border-color: $default-gray;
+	}
+	div.hr {
+		border-style: solid;
+		border-width: 0 0 1px 0;
+		border-color: $default-gray;
+	}
+	div.box {
+		padding: 7px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: $default-gray;
+		background-color: #FFFFFF;
+	}
+	div.head { margin: 10px 0 0 0; }
+	div.more { margin: 7px 0 0 0; }
+	div.pager { padding: 5px; }
+	div.colorstar { margin: 7px 0 7px 0; }
+	div.code-data{ margin: 7px 0 7px 0; }
+	div.error-message {
+		width: 226px;
+		margin: 7px 7px 2px 7px;
+		padding: 5px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #F5C8A7;
+		background-color: #FFEED8;
+		color: #9B2E2E;
+	}
+	div.ok-message {
+		width: 226px;
+		margin: 7px 7px 2px 7px;
+		padding: 5px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #C5DABA;
+		background-color: #E3F9DB;
+		color: #517B29;
+	}
+
+	//To whichever Hatena employee wrote this: why?
+
+	div.pad0 { padding: 0 0 0 0; }
+	div.pad5t { padding: 5px 0 0 0; }
+	div.pad5b { padding: 0 0 5px 0; }
+	div.pad1b { padding: 0 0 1px 0; }
+	div.pad2b { padding: 0 0 2px 0; }
+	div.pad2 { padding: 2px 2px 2px 2px; }
+	div.pad5 { padding: 5px 5px 5px 5px; }
+	div.pad0-5 { padding: 0 5px 0 5px; }
+	td.pad2 { padding: 2px 2px 2px 2px; }
+	div.pad3-5 { padding: 3px 5px 3px 5px; }
+	div.pad11 { padding: 11px 11px 11px 11px; }
+	div.pad5-11 { padding: 5px 11px 5px 11px; }
+	div.pad10b { padding: 0 0 10px 0; }
+	div.pad20b { padding: 0 0 20px 0; }
+
+	div.mar0-7 { margin: 0px 7px 0px 7px; }
+	div.mar0-11 { margin: 0px 11px 0px 11px; }
+	div.mar0 { margin: 0px 0px 0px 0px; }
+	div.mar5 { margin: 5px 5px 5px 5px; }
+}
+
+@mixin profile {
+	div.colorstar { margin: 7px 0 7px 0; }
+	div.code-data{ margin: 7px 0 7px 0; }
+	div.head { margin: 0px 0 0 0; }
+	div.send { margin: 0px 10px 3px 11px; }
+	div.link { margin: 0px 10px 0 11px; }
+	img.button { margin: 5px 0 0 0; }
+	td.theme { margin: 0 0 0 3px; }
+	div.hr-prof {
+		border-style: solid;
+		border-width: 0 0 3px 0;
+		border-color: transparent;
+	}
+	div.icon {
+		border-style: solid;
+		border-width: 1px 1px 1px 1px;
+		border-color: $default-gray;
+	}
+	div.catch {
+		margin: 5px 5px 5px 5px;
+		padding: 5px 5px 5px 5px;
+		border-style: solid;
+		border-width: 2px 2px 2px 2px;
+		border-color: #ffffff;
+	}
+	table.send { margin: 5px 0 0 0 ; }
+	td.username { height: 20px; }
+	div.prev { padding: 1px 0 5px 0; }
+	div.next { padding: 5px 0 1px 0; }
+	div.prof-det{ padding: 0 5px 0 5px; }
+
+}
+
+@mixin star-color {
+	@each $color in $star-colors { //star colors
+		$i: index($star-colors, $color) - 1;
+		span.star#{$i} { color: $color; }
+	}
+	@each $color in $star-colors {
+		$i: index($star-colors, $color) - 1;
+		span.star#{$i}c { color: $color; }
+	}
+}
+
+@mixin detail-table {
+	span.date { color: $default-gray; }
+	table.detail{ margin: 0 7px 0 7px; }
+	table.fullsize { margin: 0; }
+	div.item-term { padding: 3px 0 3px 5px; }
+	div.item-value { padding: 3px 5px 3px 0; }
+	div.item-text { padding: 3px 5px 3px 15px; }
+	div.td-body { padding: 3px 5px 3px 5px; }
+
+	@each $name, $color in $span-colors {
+		span.#{$name} { color: $color; }
+	}
+
+	a.timestamp { color: #999999; }
+	a.violation { color: #333333; }
+}
+
+@mixin comment {
+	div.comlist { background-color: #ffffff;}
+	div.comment-text { padding: 3px 5px 5px 15px; }
+	div.comment-memo { padding: 0 0 0 15px; }
+}
+
+@mixin staff-list {
+	div.staff { color: #ffffff; background-color: #1a1a1a; }
+	a.staffnam { color: #ffffff; }
+}
+
+@mixin report {
+	div.pk{ background-color: #ff3ab7; }
+	div.blue{ background-color: #3acfff; }
+	div.gray{ background-color:$default-gray; }
+	div.gray_box{
+		padding: 5px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: $default-gray;
+		background-color: #ffffff;
+	}
+	div.vio-intro { width: 240px; padding: 7px 0 7px 7px; }
+	div.vio-memo { padding: 0 0 10px 15px; }
+	div.vio-text { padding: 0 0 10px 15px; }
+	div.vio-note { color: #999999; padding: 0 0 10px 15px; }
+	div.vio-submit { padding:1 0px 0 10px 0; }
+}
+
+@mixin mail {
+	div.kadomaru{ margin: 0 11px 0 11px; }
+	div.lett_from{ padding: 3px 11px 3px 0; }
+}
+
+@mixin news {
+	div.news-head {
+		padding: 5px 7px 5px 7px;
+		border-style: solid;
+		border-width: 0 0 1px 0;
+		border-color: $default-gray;
+		background-color: #eeeeee;
+	}
+	div.news-body {
+		padding:7px;
+	}
+	img.news-memo {
+		margin: 0 10px 5px 0;
+		border-style: solid;
+		border-width: 1px;
+		border-color: $default-gray;
+	}
+}
+
+@mixin help {
+	span.url{ text-decoration:underline; }
+	div.num-box{ background-color: $default-gray; margin: 0 30px; }
+	td.tit-star{ background-color: #e9f8c3; }
+	img.help{
+		border-style: solid;
+		border-width: 2px;
+		border-color: #ffffff;
+	}
+	div.list{ padding: 0 0 5px 0; }
+	div.star-det{ padding: 5px 0 5px 0; }
+	img.sc {
+		border-style: solid;
+		border-width: 1px;
+		border-color: $default-gray;
+	}
+	div.info-head {
+		padding: 5px 7px 5px 7px;
+		border-style: solid;
+		border-width: 0 0 1px 0;
+		border-color: $default-gray;
+		background-color: #eeeeee;
+	}
+	div.noborder {
+		border-style: solid;
+		border-color: $default-gray;
+		border-width: 0 0 0 0;
+	}
+	div.info-body { padding: 7px; }
+	div.info-msg { margin: 0 0 7px 0; }
+	div.cam1{
+		margin:7px 7px 0 7px;
+		padding:7px;
+		background-color: #ff2828;
+		color: #ffffff;
+	}
+	div.cam2{
+		margin:0 7px 0 7px;
+		padding:7px;
+		border-style:solid;
+		border-width: 2px 2px 2px 2px;
+		border-color: #ff2828;
+	}
+	div.yellow {
+		margin: 0 11px 0 11px;
+		background-color: #ffe800;
+	}
+	div.sttr_gacha {
+		width: 226px;
+		margin: 7px 7px 0px 7px;
+		padding: 5px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #ea475c;
+		background-color: #ffffff;
+	}
+	div.rule-ind {
+		margin: 0 0 0 10px;
+	}
+}
+
+@mixin store {
+	div.compsp {
+		width: 226px;
+		margin: 7px 7px 0px 7px;
+		padding: 5px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #ffe800;
+		background-color: #fff9b7;
+	}
+	div.sttr_war {
+		width: 226px;
+		margin: 7px 7px 0px 7px;
+		padding: 5px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #F5C8A7;
+		background-color: #FFEED8;
+		color: #9B2E2E;
+	}
+	div.sttr_price {
+		background-color: #FF9933;
+		color: #ffffff;
+	}
+	div.sttr_theme {
+		width: 226px;
+		margin: 0px 7px 3px 7px;
+		padding: 5px;
+		border-style: solid;
+		border-width: 0px 1px 1px 1px;
+		border-color: #92cb22;
+		background-color: #ffffff;
+	}
+	div.sttr_back {
+		width: 226px;
+		margin: 0px 7px 0px 7px;
+	}
+	div.gift_l {
+		margin: 0 11px 0 11px;
+		border-style: solid;
+		border-width: 0 2px 0px 2px;
+		border-color: #ff5252;
+	}
+	div.gift_h {
+		margin: 0 11px 0 11px;
+		border-style: solid;
+		border-width: 0 2px 0px 2px;
+		border-color: #ffd616;
+	}
+	img.shop_icon { margin: 0 1px 1px 0; }
+	div.help_guide {
+		border-style: solid;
+		border-width: 0 1px 1px 1px;
+		border-color: #ffac3e;
+		border-color: #ffac3e;
+	}
+	div.guide-head {color: #ffffff; }
+}
+
+
+
+@mixin movie-tab {
+	div.on { padding: 1px 6px 3px 6px; }
+}
