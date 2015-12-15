@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-// This function will round a color to the same 5-bit colorspace that .ntft and .nbf images use.
+// This function will round a color to the same 5-bit colorspace that .ntft, .nbf and .npf images use.
 @function round-color($color) {
-  $red: round((red($color) / 32)) * 32;
-  $green: round((green($color) / 32)) * 32;
-  $blue: round((blue($color) / 32)) * 32;
+  $red: round((round((red($color) * 31) / 255) * 255 + 15) / 31);
+  $green: round((round((green($color) * 31) / 255) * 255 + 15) / 31);
+  $blue: round((round((blue($color) * 31) / 255) * 255 + 15) / 31);
   @return rgb($red, $green, $blue);
 }
 
