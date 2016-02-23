@@ -83,10 +83,10 @@ Sudomemo Theme Customization Kit (WIP)
     <th><a href="https://www.sketchapp.com/">Sketch App</a></th>
   </tr>
   <tr>
-    <td><a href="">[download not ready]</a></td>
-    <td><a href="">[download not ready]</a></td>
-    <td><a href="">[download not ready]</a></td>
-    <td><a href="">[download not ready]</a></td>
+    <td><a href="https://github.com/jaames/Sudotheme/releases/download/v1.0/template_png.zip">[download]</a></td>
+    <td><a href="https://github.com/jaames/Sudotheme/releases/download/v1.0/template_gimp.zip">[download]</a></td>
+    <td><a href="https://github.com/jaames/Sudotheme/releases/download/v1.0/template.ai">[download]</a></td>
+    <td><a href="https://github.com/jaames/Sudotheme/releases/download/v1.0/template.sketch">[download]</a></td>
   </tr>
 </table>
 
