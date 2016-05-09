@@ -1,6 +1,8 @@
 # Sudotheme
 Sudomemo Theme Customization Kit (WIP)
 
+_Note: I am not helping Sudomemo any longer, so if you have any questions, please contact the Sudomemo support staff by emailing support@sudomemo.net. Thanks for understanding! (:_
+
 <h3>Theme Overview</h3>
 <p>This section details the theme images, and where they appear on the Creator's Room page</p>
 
