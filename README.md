@@ -59,7 +59,7 @@ Sudomemo Theme Customization Kit (WIP)
   <li>
     <b>Keep it simple</b>
     <p>
-      We would prefer simple, clean designs that fit in with the aestetic of the Flipnote Studio app.
+      We would prefer simple, clean designs that fit in with the aesthetic of the Flipnote Studio app.
     </p>
   </li>
   <li>
