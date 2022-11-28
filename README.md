@@ -1,8 +1,10 @@
 # Sudotheme
+
 Sudomemo Theme Customization Kit (WIP)
 
-<h3>Theme Overview</h3>
-<p>This section details the theme images, and where they appear on the Creator's Room page</p>
+### Theme Overview
+
+This section details the theme images, and where they appear on the Creator's Room page
 
 <table>
   <tr>
@@ -36,91 +38,52 @@ Sudomemo Theme Customization Kit (WIP)
   </tr>
 </table>
 
-<h4>item</h4>
-  <p>This image isn't part of the theme itself, but it is used as a thumbnail / preview image on the Sudomemo Theme Shop
-  page. Please make sure that this image represents the overall look and feel of your theme. (:
-  </p>
-  
-<h3>Guidelines / rules</h3>
-<ul>
-  <li>
-    <b>Don't use too many colors or gradients</b>
-    <p>
-      Themes are limited to a palette of only 256 colors (i.e. they use a bitmap image format). Because of this, please try not to use too much shading or too many colors in your theme images.
-    </p>
-  </li>
-  <li>
-    <b>No signatures or watermarks</b>
-    <p>
-      -- That is, should your theme be intended for the Theme Shop. Don't worry, there will be a link to your Sudomemo
-      Creator's Room on your theme's page in the shop.
-    </p>
-  </li>
-  <li>
-    <b>Keep it simple</b>
-    <p>
-      We would prefer simple, clean designs that fit in with the aesthetic of the Flipnote Studio app.
-    </p>
-  </li>
-  <li>
-    <b>Follow the rules</b>
-    <p>
-      Of course, make sure that your theme follows the content rules as given in the <a href="http://www.sudomemo.net/help/?terms">Sudomemo Terms of Use</a>.
-    </p>
-  </li>
-</ul>
+#### item
 
-<h3>Downloads</h3>
-  <p>Here you can download a theme template file for the art software that you use. <br>
-  If you can't see your art software here, aren't sure which one to use, then please use <b>png</b>.
-  </p>
-  
-<table>
-  <tr>
-    <th>PNG</th>
-    <th><a href="https://www.gimp.org/">GIMP</a></th>
-    <th><a href="http://www.adobe.com/uk/products/illustrator.html">Adobe Illustrator</a></th>
-    <th><a href="https://www.sketchapp.com/">Sketch App</a></th>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/jaames/Sudotheme/releases/download/v1.0/template_png.zip">[download]</a></td>
-    <td><a href="https://github.com/jaames/Sudotheme/releases/download/v1.0/template_gimp.zip">[download]</a></td>
-    <td><a href="https://github.com/jaames/Sudotheme/releases/download/v1.0/template.ai">[download]</a></td>
-    <td><a href="https://github.com/jaames/Sudotheme/releases/download/v1.0/template.sketch">[download]</a></td>
-  </tr>
-</table>
+This image isn't part of the theme itself, but it is used as a thumbnail / preview image on the Sudomemo Theme Shop page. Please make sure that this image represents the overall look and feel of your theme. (:
 
-<h3>FAQ</h3>
-<ul>
-  <li>
-    <h4>If my theme is on the Theme Shop, will I recieve a commission when others buy it?</h4>
-    <p>
-      Yes! When someone buys your theme, you will receive 1/5 of the price that they pay in color stars (Sudomemo's currency-of-sorts).
-      For example, if your theme is selling for 10 color stars, you will recieve 2 color stars commission for each sale!<br>
-      You can use these stars to add to Flipnotes that you enjoy, or you can use them to purchase more themes for yourself.
-    </p>
-  </li>
-  <li>
-    <h4>Do I need Sudomemo Citizenship to make a theme?</h4>
-    <p>
-      Sudomemo Citizenship isn't required. (:
-    </p>
-  </li>
-  <li>
-    <h4>Why can't I include copyrighted content or characters from a certain franchise?</h4>
-    <p>
-      We will not allow themes that contain copyrighted content. <br>
-      Any themes containing copyrighted content would be classified as merchandise, as a result, we are unable to
-      'sell' them without express permission from the copyright holder.
-    </p>
-  </li>
-  <li>
-    <h4>How can I get in touch if I have questions?</h4>
-    <p>
-    If you have questions about the theme kit, please email support@sudomemo.net, and include "Theme Kit Question" in the
-    subject line. <br>
-    Please note that we are unable to help with graphics software problems. If you're having trouble using a specific feature of your software, their support forum will be able to provide guidance. (:
-    </p>
-  </li>
-</ul>
+### Guidelines / rules
 
+#### Don't use too many colors or gradients
+
+- Themes are limited to a palette of only 256 colors (i.e. they use a bitmap image format). Because of this, please try not to use too much shading or too many colors in your theme images.
+
+#### No signatures or watermarks
+
+- -- That is, should your theme be intended for the Theme Shop. Don't worry, there will be a link to your Sudomemo Creator's Room on your theme's page in the shop.
+
+#### Keep it simple
+
+- We would prefer simple, clean designs that fit in with the aesthetic of the Flipnote Studio app.
+
+#### Follow the rules
+
+- Of course, make sure that your theme follows the content rules as given in the [Sudomemo Terms of Use](http://www.sudomemo.net/help/?terms).
+
+### Downloads
+
+Here you can download a theme template file for the art software that you use.
+
+If you can't see your art software here, aren't sure which one to use, then please use **png**.
+
+| PNG | [GIMP](https://www.gimp.org/) | [Adobe Illustrator](http://www.adobe.com/uk/products/illustrator.html) | [Sketch App](https://www.sketchapp.com/) |
+| :-: | :-: | :-: | :-: |
+| [[download]](https://github.com/jaames/Sudotheme/releases/download/v1.0/template_png.zip) | [[download]](https://github.com/jaames/Sudotheme/releases/download/v1.0/template_gimp.zip) | [[download]](https://github.com/jaames/Sudotheme/releases/download/v1.0/template.ai) | [[download]](https://github.com/jaames/Sudotheme/releases/download/v1.0/template.sketch) |
+
+### FAQ
+
+#### If my theme is on the Theme Shop, will I recieve a commission when others buy it?
+
+- Yes! When someone buys your theme, you will receive 1/5 of the price that they pay in color stars (Sudomemo's currency-of-sorts). For example, if your theme is selling for 10 color stars, you will recieve 2 color stars commission for each sale! You can use these stars to add to Flipnotes that you enjoy, or you can use them to purchase more themes for yourself.
+
+#### Do I need Sudomemo Citizenship to make a theme?
+
+- Sudomemo Citizenship isn't required. (:
+
+#### Why can't I include copyrighted content or characters from a certain franchise?
+
+- We will not allow themes that contain copyrighted content. Any themes containing copyrighted content would be classified as merchandise, as a result, we are unable to 'sell' them without express permission from the copyright holder.
+
+#### How can I get in touch if I have questions?
+
+- If you have questions about the theme kit, please email [support@sudomemo.net](mailto:support@sudomemo.net), and include "Theme Kit Question" in the subject line. Please note that we are unable to help with graphics software problems. If you're having trouble using a specific feature of your software, their support forum will be able to provide guidance. (:
